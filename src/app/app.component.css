@@ -3,11 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  container-type: inline-size;
 }
 
 div {
-  width: 100px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@container (width < 600px) {
+  div {
+    width: 100px;
+  }
 }
